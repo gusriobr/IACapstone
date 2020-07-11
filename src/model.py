@@ -20,11 +20,9 @@ def load_original_data(sample_size=10000):
     sample = data[random_indices, :]
     return sample
 
-
 def load_structure_sample():
-    data = np.load("../resources/data_sampled.npy")
+    data = np.load("resources/data_sampled.npy")
     return data
-
 
 def read_crop_list():
     crop_codes = '/media/data/projects/crophisto/crop_codes.csv'
@@ -65,9 +63,9 @@ def train_embedding(X_train, y_train, X_test, y_test, sequence_length, vocab_siz
     crop_names = df_crops["description"].values.tolist()
     cfm = confusion_matrix(class_test, class_predicted, crop_list)
     plot_confusion_matrix(cfm, classes=crop_names, figsize=(20, 20),
-                          output_file="../resources/output/basic_embedding_{}.png".format(sequence_length))
+                          output_file="resources/output/basic_embedding_{}.png".format(sequence_length))
     report = classification_report(class_test, class_predicted)
-    report_path = "../resources/output/report_{}.txt".format(sequence_length)
+    report_path = "resources/output/report_{}.txt".format(sequence_length)
 
     text_file = open(report_path, "w")
     text_file.write(report)
@@ -104,7 +102,7 @@ y_test = to_categorical(y_test, num_classes=vocab_size)
 
 print("Train/test size: {}, {}".format(len(y_train), len(y_test)))
 
-epochs = 2
+epochs = 300
 
 for sequence_length in range(3, 9):
     print("Training with sequence: " + str(sequence_length))
