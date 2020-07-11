@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/IACapstone.iml" filepath="$PROJECT_DIR$/.idea/IACapstone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../eda-roya/.idea/eda-roya.iml" filepath="$PROJECT_DIR$/../eda-roya/.idea/eda-roya.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ml-recipes/.idea/ml-recipes.iml" filepath="$PROJECT_DIR$/../ml-recipes/.idea/ml-recipes.iml" />
     </modules>
   </component>
 </project>
