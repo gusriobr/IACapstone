@@ -55,7 +55,7 @@ The obtained model has a **f1-score of 0.71, outperfoming the base model**.
 During the entry process, the effectiveness of each characteristic of the model has been measured to see how it affects the f1 metric.
 Once the definitive model has been selected, Bayesian optimization has been used to obtain the optimal values for these parameters of the model before the model is trained with de full dataset.
 The **tunning process improved the model from 0.71 to 0.72**. 
-The test curve is stuck y the 0.71 plateau, the [ReduceLROnPlateau[(https://keras.io/api/callbacks/reduce_lr_on_plateau/)] callback has been used to try to get the  model out of the plain reducing the learning rate without success. 
+The test curve is stuck y the 0.71 plateau, the [ReduceLROnPlateau](https://keras.io/api/callbacks/reduce_lr_on_plateau/) callback has been used to try to get the  model out of the plain reducing the learning rate without success. 
 
 
 * [Tunning the model](course/modeling_keras.ipynb#Parameter-Tunning)
