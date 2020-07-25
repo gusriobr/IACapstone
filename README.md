@@ -24,7 +24,7 @@ All this data comes from claims for payment of CAP subsidies, accesible for us a
 Review the data and its structure, check the cultivation codes and see the data distributions they have to see how it can affect the model.
 The data set is strongly unbalanced. In all areas there are predominant crops, in our case they are the cereals. This makes the dataset have crops with an extreamly high frequency, to make sure that the less frequent crops have enough representation, a dataset has been created with a minimum frequency per crop.
 
-* [data exploration notebook](course/eda_sampling.ipynb)
+* [Data exploration notebook](course/eda_sampling.ipynb)
 
 # Model Definition, Training and Evaluation
 The initial idea was to use LSTM models, these models take advantage of the contextual information of a series, so they are perfect for modeling data with a temporal component. In our case, the problem is that the time series is short (9 years) and there is no access to a previous series. Different models have been made combining LSTM networks with 1-dimensional convolution networks to extract new characteristics, the result is relatively satisfactory.
@@ -32,6 +32,11 @@ As a performance metric, the **f1-score on the test set** has been used, this me
 
 Because LSTM networks have a longer training time than other deep learning models, especially if regularization parameters that [disable the use of the cuDNN implementation are used](https://keras.io/api/layers/recurrent_layers/lstm/), a reduced dataset has been extracted for model training to speed up the construction of the different iterations of the model. The frequencies of each crop have been maintained to ensure the representativeness of this dataset.
 The sample dataset has been divided into three blocks to have separate data for training, validation and testing with percentages 70% / 15% / 15%. Train and test sets are used in the keras callback to measures performance during the training and the test set is used for final evaluation.
+
+**Se ha hecho mucho trabajo de experimentación en torno a esto, se puede consultar en le documento
+En este notebook muestro solo un ejemplo de los modelos finales y un resumen de las arquitecturas que he probado para intentar dar con un modelo optimo para el caso**
+ 
+* [Model training notebook](course/modeling_sample.ipynb)
 
 # Tuning and Deployment
 During the entry process, the effectiveness of each characteristic of the model has been measured to see how it affects the f1 metric. Once the definitive model has been selected, Bayesian optimization has been used to obtain the optimal parameters of the model and then it has been trained with the total data set.
