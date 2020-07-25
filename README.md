@@ -39,7 +39,7 @@ The first step is to get a base model that gives us information about the minimu
 * Using TPOT, an AutoML library that automatically trains state of art models, in this case a **0.5 f1-score**  is obtained using a ExtraTreesClassifier model. 
 65% of crops have changed the last year of the serie from the previous one, this makes so difficult to predict the next year, and a deep-learning model that could interpret this serie could help. 
 
-* [Model training notebook](course/modeling_sample.ipynb)
+* [Model training notebook](course/base_model_tpot.ipynb)
 
 **LSTM model**
 * [Deep learning model](course/modeling_keras.ipynb)
