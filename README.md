@@ -8,13 +8,15 @@ The idea behind the project is that the farmer uses his land in a cyclical way, 
 In this cyclical use of crops, is a common practice, for example, to leave the land uncultivated one year out of three, to avoid problems with pests, fertilizers, etc. In other cases, there are static crops that generally do not vary (trees, olive, vineyard).
 The model does not intend to train a specific case of a farmer, we try to see if, taking a very high number of use cases, we can extract the generality of the patterns of crop usage and given a sequence of years, we can know the most likely crop for the following year.
 
-As a first attempt, we gathered the last 9 years history for around 2M points tagging for each year the crop code, hoping that we can apply some LSTM network to predict the next year crop code. 
+So this is a **categorical time series problem**, where each step in timeline is represented with a value of a categorical variable. 
+As a first attempt, we gathered the last 9 years history for around 2M points tagging for each year the crop code, hoping that we can apply some **LSTM network** to predict the next year crop code. 
 
 # Data Set, ETL and Feature Creation
 The data consist in around 2 million points scatterred over all the region territory, the original data file was a shape file with point features, having each point an attribute for each year with the crop code used.
 We have 27 different crops: WHEAT, CORN, BARLEY, FLOOR, SUNFLOWER, RAPE, GREEN PEAS, ALFALFA, FORAGE, BEET, VINEYARD, OLIVE, HORTICULTURAL, AROMATIC, FRUITS, SCRUB, DIFFERENT KINDS OF LEAFY TREES, etc
 
-The first feature extraction technique applied was the conversion of the crop codes so the can be used in the LSTM model. Crop codes is a categorical variable and must be converted to numerical values in order to be used as a deep learning model input. This conversion has been done using the [feature embedding technique](https://cloud.google.com/solutions/machine-learning/overview-extracting-and-serving-feature-embeddings-for-machine-learning), to convert each crop code to a vector of fixed dimensions.
+The first feature extraction technique applied was the conversion of the crop codes so the can be used in the LSTM model. Crop codes is a categorical variable and must be converted to numerical values in order to be used as a deep learning model input. 
+This conversion has been done using the [feature embedding technique](https://cloud.google.com/solutions/machine-learning/overview-extracting-and-serving-feature-embeddings-for-machine-learning), to convert each crop code to a vector of fixed dimensions.
 
 All this data comes from claims for payment of CAP subsidies, accesible for us as regional goverment agency, but it cannot be shared in the project, but I thin the data exploration and visualization notebook gives a sufficient idea of the data structure.
 
