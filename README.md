@@ -43,7 +43,12 @@ During the entry process, the effectiveness of each characteristic of the model 
 
 * [Tunning the model](course/tunning.ipynb)
 
-
+# Next steps
+This is just a starting point, thank you to this course 
+there are many ideas that I have to try:
+* Add new categorical variables
+* Use a preclustering to create automatic index for each crop to create a new feature
+* Flatten the timeseries to enleghten the context so LSTM can learn the patterns
 Feature Engineering
 
 Selection and justification of Model Performance Indicator
