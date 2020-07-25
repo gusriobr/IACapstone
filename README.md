@@ -12,16 +12,25 @@ As a first attempt, we gathered the last 9 years history for around 2M points ta
 
 # Data Set
 The data consist in around 2 million points scatterred over all the region territory, the original data file was a shape file with point features, having each point an attribute for each year with the crop code used.
-All this data is private and cannot be shared, but an small sample is provided as example.
 We have 27 different crops: WHEAT,CORN,BARLEY,FLOOR,SUNFLOWER,RAPE,GREEN PEAS,ALFALFA,FORAGE,BEET,VINEYARD,OLIVE,HORTICULTURAL,AROMATIC,FRUITS,SCRUB,DIFFERENT KINDS OF LEAFY TREES, etc
+All this data comes from claims for payment of CAP subsidies, accesible for us as regional goverment agency, but it cannot be shared, but an small sample without geolocalization is provided as example.
 
+# ETL and Feature Creation
+
+Data Exploration and Data Visualization 
 # Data Quality Assessment
 
+Model Definition and Training
+Model Evaluation, Tuning, Deployment and Documentation
 
-Data Exploration (e.g. correlation between columns)
-Data Visualization (e.g. value distribution of columns)
-At least one Feature Engineering (e.g. imputing missing values) applied
-Selection and justification of Model Performance Indicator (e.g. F1 score)
+
+
+
+Feature Engineering
+
+Selection and justification of Model Performance Indicator
+
 At least one traditional Machine Learning Algorithm and one DeepLearning Algorithm applied and demonstrated
+
 Model performance between different feature engineerings and models compared and documented
 Please assign one point for each item below which is properly covered in the ADD
