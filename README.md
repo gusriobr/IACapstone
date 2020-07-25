@@ -1,5 +1,5 @@
 # Predicting crop usage from historical data
-This is the final report for capstone project of IBM Advanced Data Science Course.
+This is the final report for capstone project of IBM [Advanced Data Science with IBM Specialization](https://www.coursera.org/specializations/advanced-data-science-ibm).
 
 # Use Case
 I work in a goberment body in a region of Spain that provides services and IT assistance to farmers. We are specially focused on developing decission support tools for different agricultural purposes. In one of this tools, it would be in a great help to have a model that could predict the next year land usage for a given area base on historical data.
