@@ -42,7 +42,19 @@ The first step is to get a base model that gives us information about the minimu
 * [Model training notebook](course/base_model_tpot.ipynb)
 
 **LSTM model**
-* [Deep learning model](course/modeling_keras.ipynb)
+LSTM models are commonly used as predictors or classifiers for time series data. In this case, we are going to trea
+In our case, the time series is relatively short, we only have 9 years (8 historical + 1 prediction), and it has the additional problem of being categorical data.
+In order to use them, we will code the categorical variables using embeddings, so that each year it will be coded as a 20-dimensional vector.
+The model used is similar to those commonly used for text-based prediction (next word prediction, sentiment prediction, etc.). In these models each word is encoded with a vector and the LSTM model is capable of giving an answer based on the context of the series received as input.
+In our case, as an analogy, the LSTM model will be learning the patterns of crop use that occur in our region.
+* [Deep learning model](course/modeling_lstm_keras.ipynb)
+
+As an alternative to LSTM models, I have also tried 1-dimensional convolution nets. Convolution nets are widely used models for image recognition. These recesses create filters that store information about the most relevant color structures associated with a category (eg, a cat's ear, a bird's beak). This for two dimensions, when we go to one dimension, the convolution network looks for patterns in the time series. The model kernel moves along the timeline and the network filters will store in their weights the information that encodes the most relevant patterns for each crop category.
+* [Deep learning model](course/modeling_1dconv_keras.ipynb)
+
+As a final test, both models have been combined in different ways, without much success.
+ 
+* [Deep learning model](course/modeling_lstm_1dconv.ipynb)
 
 **Se ha hecho mucho trabajo de experimentación en torno a esto, se puede consultar en le documento
 En este notebook muestro solo un ejemplo de los modelos finales y un resumen de las arquitecturas que he probado para intentar dar con un modelo optimo para el caso**
