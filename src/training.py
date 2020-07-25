@@ -1,6 +1,5 @@
 import math
 import os
-import numpy as np
 
 import keras
 import tensorflow as tf
@@ -25,9 +24,12 @@ def step_decay(epoch, lr):
     return lrate
 
 
-def create_training_folder(exp_base, tag):
-    folder_path = res("results/" + exp_base + "/" + tstmp() + "_" + tag)
-    os.makedirs(folder_path, )
+def create_training_folder(exp_base, tag, add_timestamp=True):
+    if add_timestamp:
+        folder_path = res("results/" + exp_base + "/" + tstmp() + "_" + tag)
+    else:
+        folder_path = res("results/" + exp_base + "/" + tag)
+    os.makedirs(folder_path, exist_ok=True)
     return folder_path
 
 

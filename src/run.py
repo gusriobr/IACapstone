@@ -1,6 +1,7 @@
 import keras
 import keras.backend as K
 import tensorflow as tf
+from tensorflow.python.keras.callbacks import ReduceLROnPlateau
 
 import models_1d
 from data import read_crop_list, prepare_data
@@ -29,6 +30,7 @@ if __name__ == '__main__':
     crop_list = df_crops["code"].values.tolist()
 
     (X_train, y_train), (X_test, y_test), (X_val, y_val) = prepare_data()
+    exit(0)
 
     models = models_1d.lstm_models
     models = [
@@ -61,7 +63,6 @@ if __name__ == '__main__':
         print(model.summary())
         # exit(0)
         # reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2,
-        #                               patience=5, min_lr=0.001)
 
         # lr_scheduller = tf.keras.callbacks.LearningRateScheduler(step_decay_exp)
         # lr_scheduller = tf.keras.callbacks.ReduceLROnPlateau(step_decay_exp)

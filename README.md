@@ -39,7 +39,7 @@ The first step is to get a base model that gives us information about the minimu
 * Using TPOT, an AutoML library that automatically trains state of art models, in this case a **0.5 f1-score**  is obtained using a ExtraTreesClassifier model. 
 65% of crops have changed the last year of the serie from the previous one, this makes so difficult to predict the next year, and a deep-learning model that could interpret this serie could help. 
 
-* [Model training notebook](course/base_model_tpot.ipynb)
+* [Model training notebook](course/modeling_base_tpot.ipynb)
 
 **LSTM model**
 
@@ -48,29 +48,22 @@ In our case, the time series is relatively short, we only have 9 years (8 histor
 In order to use them, we will code the categorical variables using embeddings, so that each year it will be coded as a 20-dimensional vector.
 The model used is similar to those commonly used for text-based prediction (next word prediction, sentiment prediction, etc.). In these models each word is encoded with a vector and the LSTM model is capable of giving an answer based on the context of the series received as input.
 In our case, as an analogy, the LSTM model will be learning the patterns of crop use that occur in our region.
+The obtained model has a **f1-score of 0.71, outperfoming the base model**.
 * [LSTM model](course/modeling_lstm_keras.ipynb)
 
-**1D Convolution network**
-
-As an alternative to LSTM models, I have also tried 1-dimensional convolution nets. Convolution nets are widely used models for image recognition. These recesses create filters that store information about the most relevant color structures associated with a category (eg, a cat's ear, a bird's beak). This for two dimensions, when we go to one dimension, the convolution network looks for patterns in the time series. The model kernel moves along the timeline and the network filters will store in their weights the information that encodes the most relevant patterns for each crop category.
-* [1D convolutional model](course/modeling_1dconv_keras.ipynb)
-
-As a final test, both models have been combined in different ways, without much success.
- 
-* [LSTM-Conv1D model](course/modeling_lstm_1dconv.ipynb)
-
-**Se ha hecho mucho trabajo de experimentación en torno a esto, se puede consultar en le documento
-En este notebook muestro solo un ejemplo de los modelos finales y un resumen de las arquitecturas que he probado para intentar dar con un modelo optimo para el caso**
-(It's just a drapht, a bitacora of the steps followed, sorry just in spanish)
-
 # Tuning and Deployment
-During the entry process, the effectiveness of each characteristic of the model has been measured to see how it affects the f1 metric. Once the definitive model has been selected, Bayesian optimization has been used to obtain the optimal parameters of the model and then it has been trained with the total data set.
+During the entry process, the effectiveness of each characteristic of the model has been measured to see how it affects the f1 metric.
+Once the definitive model has been selected, Bayesian optimization has been used to obtain the optimal values for these parameters of the model before the model is trained with de full dataset.
+The **tunning process improved the model from 0.71 to 0.72**. 
+The test curve is stuck y the 0.71 plateau, the [ReduceLROnPlateau[(https://keras.io/api/callbacks/reduce_lr_on_plateau/)] callback has been used to try to get the  model out of the plain reducing the learning rate without success. 
 
-* [Tunning the model](course/tunning.ipynb)
+
+* [Tunning the model](course/modeling_keras.ipynb#Parameter-Tunning)
 
 # Next steps
 This is just a starting point, thank you to this course 
 there are many ideas that I have to try:
+* Experiment with 1DConv networks. As an alternative to LSTM models, I have also tried 1-dimensional convolution nets. Convolution nets are widely used models for image recognition. These recesses create filters that store information about the most relevant color structures associated with a category (eg, a cat's ear, a bird's beak). This for two dimensions, when we go to one dimension, the convolution network looks for patterns in the time series. The model kernel moves along the timeline and the network filters will store in their weights the information that encodes the most relevant patterns for each crop category·
 * Add new categorical variables as new embeddings [as seen here](https://github.com/mmortazavi/EntityEmbedding-Working_Example).
 * Use a preclustering to create automatic index for each crop to create a new feature.
 * Flatten the timeseries to wpy

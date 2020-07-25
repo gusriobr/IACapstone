@@ -47,7 +47,10 @@ def prepare_data():
     X = sample[:, 0:8]
 
     # X = one_hot_encoding_X(X, vocab_size=vocab_size)
+    num_clasess = len(np.unique(y[:, 11]))
     y = to_categorical(y)
+
+    print(y.shape)
     # random train-test split
     # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
