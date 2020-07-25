@@ -22,7 +22,7 @@ All this data comes from claims for payment of CAP subsidies, accesible for us a
 Review the data and its structure, check the cultivation codes and see the data distributions they have to see how it can affect the model.
 The data set is strongly unbalanced. In all areas there are predominant crops, in our case they are the cereals. This makes the dataset have crops with an extreamly high frequency, to make sure that the less frequent crops have enough representation, a dataset has been created with a minimum frequency per crop.
 
-[date exploration notebook](course/eda_sampling.ipynb)
+* [data exploration notebook](course/eda_sampling.ipynb)
 
 # Model Definition, Training and Evaluation
 The initial idea was to use LSTM models, these models take advantage of the contextual information of a series, so they are perfect for modeling data with a temporal component. In our case, the problem is that the time series is short (9 years) and there is no access to a previous series. Different models have been made combining LSTM networks with 1-dimensional convolution networks to extract new characteristics, the result is relatively satisfactory.
