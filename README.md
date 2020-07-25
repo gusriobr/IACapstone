@@ -1,4 +1,4 @@
-# IAcapstone
+# Predicting crop usage from historical data
 This is the final report for capstone project of IBM Advanced Data Science Course.
 
 # Use Case
