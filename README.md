@@ -17,23 +17,19 @@ We have 27 different crops: WHEAT,CORN,BARLEY,FLOOR,SUNFLOWER,RAPE,GREEN PEAS,AL
 All this data comes from claims for payment of CAP subsidies, accesible for us as regional goverment agency, but it cannot be shared in the project, but I thin the data exploration and visualization notebook gives a sufficient idea of the data structure.
 
 # Data Exploration, Visualization and Quality Assessment
+Review the data and its structure, check the cultivation codes and see the data distributions they have to see how it can affect the model.
+The data set is strongly unbalanced. In all areas there are predominant crops, in our case they are the cereals. This makes the dataset have crops with an extreamly high frequency, to make sure that the less frequent crops have enough representation, a dataset has been created with a minimum frequency per crop.
 
+# Model Definition, Training and Evaluation
+The initial idea was to use LSTM models, these models take advantage of the contextual information of a series, so they are perfect for modeling data with a temporal component. In our case, the problem is that the time series is short (9 years) and there is no access to a previous series. Different models have been made combining LSTM networks with 1-dimensional convolution networks to extract new characteristics, the result is relatively satisfactory.
+As a performance metric, the **f1-score on the test set** has been used, this metric balances between precision and recall and makes it more robust in unbalanced datasets.
 
+Because LSTM networks have a longer training time than other deep learning models, especially if regularization parameters that [disable the use of the cuDNN implementation are used](https://keras.io/api/layers/recurrent_layers/lstm/), a reduced dataset has been extracted for model training to speed up the construction of the different iterations of the model. The frequencies of each crop have been maintained to ensure the representativeness of this dataset.
+The sample dataset has been divided into three blocks to have separate data for training, validation and testing with percentages 70% / 15% / 15%. Train and test sets are used in the keras callback to measures performance during the training and the test set is used for final evaluation.
 
-# Model Definition and Training
-Se ha intentando modeler directamente con un árbol de decisión para tomarlo como modelo base y ver si aumentan.
+# Tuning and Deployment
+Durante el proceso de entramiento se ha ido midiendo la efectividad de cada característica del modelo para ver cómo afecta a la métrica f1. Una vez se ha seleccionado el modelo definitivo, se ha utilizando optimización bayesiana para obtener los parámetros óptimos del modelo y después se ha entrenado con el conjunto de datos total.
 
-El conjunto de datos es muy elevado, el entrenamiento se ha hecho con un Ubuntu laptop con gpu (aunque debido a restricciones de keras en algunos casos los modelos lstm no hacen uso de gpu) 
-
-LSTM and CONV modeling the the crop series
-
-
-# Model Evaluation, Tuning, Deployment and Documentation
-El modelo lstm es muy útil par aseries, pero en este caso, no es bastante, debido en mi opinión a la longitdu de la secuencia. Estos modelos se basan en aprender del contexto, pero en este caso el contexto es demasiado corto.
-se ha intentado crar características adicionales, pero no ha mejorado
-
-
-Para la optimización, en lugar de utilizado gridsarc . otra alternativa podría ser el uso de algoritmos genéticos
 
 
 Feature Engineering
