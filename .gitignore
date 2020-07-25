@@ -23,6 +23,7 @@ sdist/
 var/
 *.egg-info/
 results/*
+resources/output
 .installed.cfg
 *.egg
 
