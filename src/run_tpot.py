@@ -1,10 +1,9 @@
 import numpy as np
 from sklearn.model_selection import StratifiedShuffleSplit
-from tensorflow.python.keras.utils.np_utils import to_categorical
 from tpot import TPOTClassifier
 
 from data import read_crop_list, load_structured_sample
-from eval import eval_model, eval_model_one_hot
+from eval import eval_model
 from training import create_training_folder
 
 #
@@ -41,7 +40,6 @@ if __name__ == '__main__':
         X_train, X_test = X[train_index], X[test_index]
         y_train, y_test = y[train_index], y[test_index]
 
-    folder = create_training_folder("tpot")
 
     tpot = TPOTClassifier(generations=5, population_size=50, verbosity=2, random_state=42)
     tpot.fit(X_train, y_train)
@@ -51,6 +49,7 @@ if __name__ == '__main__':
     y_hat = tpot.predict(X_test)
 
     # eval model
+    folder = create_training_folder("tpot")
     eval_model(folder, y_test, y_hat, crop_list, crop_names)
     # save model
     # model_folder = '{}/model'.format(folder)
