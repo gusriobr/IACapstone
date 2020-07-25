@@ -62,7 +62,8 @@ The test curve is stuck int the 0.71 plateau, the [ReduceLROnPlateau](https://ke
 # Next steps
 This is just a starting point, thank you to this course 
 there are many ideas that I have to try:
-* Experiment with 1DConv networks. As an alternative to LSTM models, I have also tried 1-dimensional convolution nets. Convolution nets are widely used models for image recognition. These recesses create filters that store information about the most relevant color structures associated with a category (eg, a cat's ear, a bird's beak). This for two dimensions, when we go to one dimension, the convolution network looks for patterns in the time series. The model kernel moves along the timeline and the network filters will store in their weights the information that encodes the most relevant patterns for each crop category·
 * Add new categorical variables as new embeddings [as seen here](https://github.com/mmortazavi/EntityEmbedding-Working_Example).
 * Use a preclustering to create automatic index for each crop to create a new feature.
 * Flatten the timeseries to leghten the context so LSTM can have more steps to learn from context.
+* Experiment with 1DConv networks. As an alternative to LSTM models, I have also tried 1-dimensional convolution nets. Convolution nets are widely used models for image recognition. These recesses create filters that store information about the most relevant color structures associated with a category (eg, a cat's ear, a bird's beak). This for two dimensions, when we go to one dimension, the convolution network looks for patterns in the time series. The model kernel moves along the timeline and the network filters will store in their weights the information that encodes the most relevant patterns for each crop category·
+* Use [lstm-vis library](http://lstm.seas.harvard.edu/) to visualize the LSTM cells state.
