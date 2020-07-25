@@ -35,7 +35,7 @@ The sample dataset has been divided into three blocks to have separate data for 
 
 **Se ha hecho mucho trabajo de experimentación en torno a esto, se puede consultar en le documento
 En este notebook muestro solo un ejemplo de los modelos finales y un resumen de las arquitecturas que he probado para intentar dar con un modelo optimo para el caso**
- 
+(It's just a drapht, a bitacora of the steps followed, sorry just in spanish)
 * [Model training notebook](course/modeling_sample.ipynb)
 
 # Tuning and Deployment
