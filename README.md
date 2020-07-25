@@ -57,7 +57,6 @@ Once the definitive model has been selected, Bayesian optimization has been used
 The **tunning process improved the model from 0.71 to 0.72**. 
 The test curve is stuck y the 0.71 plateau, the [ReduceLROnPlateau](https://keras.io/api/callbacks/reduce_lr_on_plateau/) callback has been used to try to get the  model out of the plain reducing the learning rate without success. 
 
-
 * [Tunning the model](course/modeling_keras.ipynb#Parameter-Tunning)
 
 # Next steps
@@ -66,13 +65,4 @@ there are many ideas that I have to try:
 * Experiment with 1DConv networks. As an alternative to LSTM models, I have also tried 1-dimensional convolution nets. Convolution nets are widely used models for image recognition. These recesses create filters that store information about the most relevant color structures associated with a category (eg, a cat's ear, a bird's beak). This for two dimensions, when we go to one dimension, the convolution network looks for patterns in the time series. The model kernel moves along the timeline and the network filters will store in their weights the information that encodes the most relevant patterns for each crop category·
 * Add new categorical variables as new embeddings [as seen here](https://github.com/mmortazavi/EntityEmbedding-Working_Example).
 * Use a preclustering to create automatic index for each crop to create a new feature.
-* Flatten the timeseries to wpy
-cdleghten the context so LSTM can learn the patterns.
-Feature Engineering
-
-Selection and justification of Model Performance Indicator
-
-At least one traditional Machine Learning Algorithm and one DeepLearning Algorithm applied and demonstrated
-
-Model performance between different feature engineerings and models compared and documented
-Please assign one point for each item below which is properly covered in the ADD
+* Flatten the timeseries to leghten the context so LSTM can have more steps to learn from context.
