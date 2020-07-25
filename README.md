@@ -10,20 +10,30 @@ The model does not intend to train a specific case of a farmer, we try to see if
 
 As a first attempt, we gathered the last 9 years history for around 2M points tagging for each year the crop code, hoping that we can apply some LSTM network to predict the next year crop code. 
 
-# Data Set
+# Data Set, ETL and Feature Creation
 The data consist in around 2 million points scatterred over all the region territory, the original data file was a shape file with point features, having each point an attribute for each year with the crop code used.
 We have 27 different crops: WHEAT,CORN,BARLEY,FLOOR,SUNFLOWER,RAPE,GREEN PEAS,ALFALFA,FORAGE,BEET,VINEYARD,OLIVE,HORTICULTURAL,AROMATIC,FRUITS,SCRUB,DIFFERENT KINDS OF LEAFY TREES, etc
-All this data comes from claims for payment of CAP subsidies, accesible for us as regional goverment agency, but it cannot be shared, but an small sample without geolocalization is provided as example.
 
-# ETL and Feature Creation
+All this data comes from claims for payment of CAP subsidies, accesible for us as regional goverment agency, but it cannot be shared in the project, but I thin the data exploration and visualization notebook gives a sufficient idea of the data structure.
 
-Data Exploration and Data Visualization 
-# Data Quality Assessment
-
-Model Definition and Training
-Model Evaluation, Tuning, Deployment and Documentation
+# Data Exploration, Visualization and Quality Assessment
 
 
+
+# Model Definition and Training
+Se ha intentando modeler directamente con un árbol de decisión para tomarlo como modelo base y ver si aumentan.
+
+El conjunto de datos es muy elevado, el entrenamiento se ha hecho con un Ubuntu laptop con gpu (aunque debido a restricciones de keras en algunos casos los modelos lstm no hacen uso de gpu) 
+
+LSTM and CONV modeling the the crop series
+
+
+# Model Evaluation, Tuning, Deployment and Documentation
+El modelo lstm es muy útil par aseries, pero en este caso, no es bastante, debido en mi opinión a la longitdu de la secuencia. Estos modelos se basan en aprender del contexto, pero en este caso el contexto es demasiado corto.
+se ha intentado crar características adicionales, pero no ha mejorado
+
+
+Para la optimización, en lugar de utilizado gridsarc . otra alternativa podría ser el uso de algoritmos genéticos
 
 
 Feature Engineering
