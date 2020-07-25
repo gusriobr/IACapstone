@@ -35,8 +35,8 @@ The sample dataset has been divided into three blocks to have separate data for 
 
 **Base model**
 The first step is to get a base model that gives us information about the minimun performance expected for the deep learning model. Two basic models have been developt:
-* One model base using prior knowledge of crop usage, or using just the last year crop as expected category leads to a 0.25 f1-score.
-* Using TPOT, an AutoML library that automatically trains state of art models, in this case a 0.5 f1-score  is obtained using a ExtraTreesClassifier model. 
+* One model base using prior knowledge of crop usage, or using just the last year crop as expected category leads to a **0.25 f1-score**.
+* Using TPOT, an AutoML library that automatically trains state of art models, in this case a **0.5 f1-score**  is obtained using a ExtraTreesClassifier model. 
 65% of crops have changed the last year of the serie from the previous one, this makes so difficult to predict the next year, and a deep-learning model that could interpret this serie could help. 
 
 * [Model training notebook](course/modeling_sample.ipynb)
