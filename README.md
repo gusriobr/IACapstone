@@ -41,6 +41,7 @@ En este notebook muestro solo un ejemplo de los modelos finales y un resumen de 
 # Tuning and Deployment
 During the entry process, the effectiveness of each characteristic of the model has been measured to see how it affects the f1 metric. Once the definitive model has been selected, Bayesian optimization has been used to obtain the optimal parameters of the model and then it has been trained with the total data set.
 
+* [Tunning the model](course/tunning.ipynb)
 
 
 Feature Engineering
