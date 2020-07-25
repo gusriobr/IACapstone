@@ -1,0 +1,194 @@
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020-07-17 19:12:02,171 [    290]   WARN - llij.ide.plugins.PluginManager - Resource bundle redefinition for plugin 'com.jetbrains.pycharm.community.customization'. Old value: messages.ActionsBundle, new value: messages.PyBundle 
+2020-07-17 19:12:03,109 [   1228]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2020-07-17 19:12:03,117 [   1236]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: com.intellij] 
+2020-07-17 19:12:03,117 [   1236]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2020-07-17 19:12:03,168 [   1287]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: PythonCore] 
+2020-07-17 19:12:05,554 [   3673]   WARN - pl.local.NativeFileWatcherImpl - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-07-17 19:12:05,555 [   3674]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-07-17 19:12:07,174 [   5293]   WARN - openapi.wm.impl.ToolWindowImpl - ToolWindow icons should be 13x13. Please fix ToolWindow (ID:  Problems View) or icon jar:file:/home/gus/apps/pycharm-community-2018.2.4/lib/icons.jar!/general/warning.svg 
+2020-07-17 19:12:10,911 [   9030]   WARN - ystem.impl.ActionPopupMenuImpl - 1019ms to fill popup menu EditorPopup 
+2020-07-17 19:12:12,924 [  11043]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-07-17 19:12:12,924 [  11043]   WARN - .skeletons.PySkeletonRefresher - matplotlib._contour 
+2020-07-17 19:12:12,924 [  11043]   WARN - .skeletons.PySkeletonRefresher - matplotlib._image 
+2020-07-17 19:12:12,924 [  11043]   WARN - .skeletons.PySkeletonRefresher - matplotlib._path 
+2020-07-17 19:12:12,924 [  11043]   WARN - .skeletons.PySkeletonRefresher - matplotlib._png 
+2020-07-17 19:12:12,924 [  11043]   WARN - .skeletons.PySkeletonRefresher - matplotlib._qhull 
+2020-07-17 19:12:12,924 [  11043]   WARN - .skeletons.PySkeletonRefresher - matplotlib._tri 
+2020-07-17 19:12:12,924 [  11043]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._backend_agg 
+2020-07-17 19:12:12,924 [  11043]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._tkagg 
+2020-07-17 19:12:12,924 [  11043]   WARN - .skeletons.PySkeletonRefresher - matplotlib.ft2font 
+2020-07-17 19:12:12,924 [  11043]   WARN - .skeletons.PySkeletonRefresher - matplotlib.ttconv 
+2020-07-17 19:12:12,924 [  11043]   WARN - .skeletons.PySkeletonRefresher - xgboost.lib.libxgboost 
+2020-07-17 19:12:13,043 [  11162]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-07-17 19:12:13,043 [  11162]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow 
+2020-07-17 19:12:13,043 [  11162]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_dataset 
+2020-07-17 19:12:13,043 [  11162]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_flight 
+2020-07-17 19:12:13,043 [  11162]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_python 
+2020-07-17 19:12:13,043 [  11162]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_python_flight 
+2020-07-17 19:12:13,043 [  11162]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libgandiva 
+2020-07-17 19:12:13,043 [  11162]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libparquet 
+2020-07-17 19:12:13,043 [  11162]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libplasma 
+2020-07-17 19:12:13,043 [  11162]   WARN - .skeletons.PySkeletonRefresher - scipy.optimize._lsap_ 
+2020-07-17 19:12:13,043 [  11162]   WARN - .skeletons.PySkeletonRefresher - tensorflow.compiler.tf2xla.ops._xla_ops 
+2020-07-17 19:12:13,043 [  11162]   WARN - .skeletons.PySkeletonRefresher - tensorflow.core.kernels.libtfkernel_sobol_op 
+2020-07-17 19:12:13,043 [  11162]   WARN - .skeletons.PySkeletonRefresher - tensorflow.lite.experimental.microfrontend.python.ops._audio_microfrontend_op 
+2020-07-17 19:14:50,892 [ 169011]   WARN - n.process.BaseOSProcessHandler - Process hasn't generated any output for a long time.
+If it's a long-running mostly idle daemon process, consider overriding OSProcessHandler#readerOptions with 'BaseOutputReader.Options.forMostlySilentProcess()' to reduce CPU usage.
+Command line: /home/gus/workspaces/wpy/venvs/mathor/bin/python3.6 /home/gus/workspaces/wpy/IACapstone/src/run_tpot.py 
+java.lang.Throwable: Process creation:
+	at com.intellij.execution.process.BaseOSProcessHandler.<init>(BaseOSProcessHandler.java:31)
+	at com.intellij.execution.process.OSProcessHandler.<init>(OSProcessHandler.java:46)
+	at com.intellij.execution.process.KillableProcessHandler.<init>(KillableProcessHandler.java:37)
+	at com.intellij.execution.process.ColoredProcessHandler.<init>(ColoredProcessHandler.java:24)
+	at com.intellij.execution.process.KillableColoredProcessHandler.<init>(KillableColoredProcessHandler.java:29)
+	at com.jetbrains.python.run.PythonProcessHandler.<init>(PythonProcessHandler.java:20)
+	at com.jetbrains.python.run.PythonProcessRunner.createProcess(PythonProcessRunner.java:23)
+	at com.jetbrains.python.run.PythonProcessRunner.createProcess(PythonProcessRunner.java:28)
+	at com.jetbrains.python.run.PythonCommandLineState.doCreateProcess(PythonCommandLineState.java:289)
+	at com.jetbrains.python.run.PythonScriptCommandLineState.doCreateProcess(PythonScriptCommandLineState.java:203)
+	at com.jetbrains.python.run.PythonCommandLineState.lambda$getDefaultPythonProcessStarter$0(PythonCommandLineState.java:239)
+	at com.jetbrains.python.run.PythonCommandLineState.startProcess(PythonCommandLineState.java:219)
+	at com.jetbrains.python.run.PythonCommandLineState.execute(PythonCommandLineState.java:145)
+	at com.jetbrains.python.run.PythonScriptCommandLineState.execute(PythonScriptCommandLineState.java:110)
+	at com.jetbrains.python.run.PythonCommandLineState.execute(PythonCommandLineState.java:139)
+	at com.jetbrains.python.run.PythonRunner.doExecute(PythonRunner.java:43)
+	at com.jetbrains.python.run.PythonRunner.lambda$execute$0(PythonRunner.java:28)
+	at com.intellij.execution.ExecutionManager$startRunProfile$1.invoke(ExecutionManager.kt:64)
+	at com.intellij.execution.ExecutionManager$startRunProfile$1.invoke(ExecutionManager.kt:19)
+	at com.intellij.execution.impl.ExecutionManagerImpl$startRunProfile$1.invoke(ExecutionManagerImpl.kt:147)
+	at com.intellij.execution.impl.ExecutionManagerImpl$startRunProfile$1.invoke(ExecutionManagerImpl.kt:60)
+	at com.intellij.execution.impl.ExecutionManagerImpl$doStartRunProfile$startRunnable$1.run(ExecutionManagerImpl.kt:208)
+	at com.intellij.openapi.application.TransactionGuardImpl$2.run(TransactionGuardImpl.java:201)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:831)
+	at com.intellij.openapi.application.impl.ApplicationImpl.lambda$invokeLater$4(ApplicationImpl.java:310)
+	at com.intellij.openapi.application.impl.FlushQueue.doRun(FlushQueue.java:80)
+	at com.intellij.openapi.application.impl.FlushQueue.runNextEvent(FlushQueue.java:128)
+	at com.intellij.openapi.application.impl.FlushQueue.flushNow(FlushQueue.java:46)
+	at com.intellij.openapi.application.impl.FlushQueue$FlushNow.run(FlushQueue.java:184)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:776)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:727)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:746)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.java:974)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.java:847)
+	at com.intellij.ide.IdeEventQueue.lambda$null$8(IdeEventQueue.java:449)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:741)
+	at com.intellij.ide.IdeEventQueue.lambda$dispatchEvent$9(IdeEventQueue.java:448)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:831)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.java:496)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2020-07-17 23:51:21,228 [16759347]   WARN - n.process.BaseOSProcessHandler - Process hasn't generated any output for a long time.
+If it's a long-running mostly idle daemon process, consider overriding OSProcessHandler#readerOptions with 'BaseOutputReader.Options.forMostlySilentProcess()' to reduce CPU usage.
+Command line: /home/gus/workspaces/wpy/venvs/mathor/bin/python3.6 /home/gus/workspaces/wpy/IACapstone/src/run_tpot.py 
+java.lang.Throwable: Process creation:
+	at com.intellij.execution.process.BaseOSProcessHandler.<init>(BaseOSProcessHandler.java:31)
+	at com.intellij.execution.process.OSProcessHandler.<init>(OSProcessHandler.java:46)
+	at com.intellij.execution.process.KillableProcessHandler.<init>(KillableProcessHandler.java:37)
+	at com.intellij.execution.process.ColoredProcessHandler.<init>(ColoredProcessHandler.java:24)
+	at com.intellij.execution.process.KillableColoredProcessHandler.<init>(KillableColoredProcessHandler.java:29)
+	at com.jetbrains.python.run.PythonProcessHandler.<init>(PythonProcessHandler.java:20)
+	at com.jetbrains.python.run.PythonProcessRunner.createProcess(PythonProcessRunner.java:23)
+	at com.jetbrains.python.run.PythonProcessRunner.createProcess(PythonProcessRunner.java:28)
+	at com.jetbrains.python.run.PythonCommandLineState.doCreateProcess(PythonCommandLineState.java:289)
+	at com.jetbrains.python.run.PythonScriptCommandLineState.doCreateProcess(PythonScriptCommandLineState.java:203)
+	at com.jetbrains.python.run.PythonCommandLineState.lambda$getDefaultPythonProcessStarter$0(PythonCommandLineState.java:239)
+	at com.jetbrains.python.run.PythonCommandLineState.startProcess(PythonCommandLineState.java:219)
+	at com.jetbrains.python.run.PythonCommandLineState.execute(PythonCommandLineState.java:145)
+	at com.jetbrains.python.run.PythonScriptCommandLineState.execute(PythonScriptCommandLineState.java:110)
+	at com.jetbrains.python.run.PythonCommandLineState.execute(PythonCommandLineState.java:139)
+	at com.jetbrains.python.run.PythonRunner.doExecute(PythonRunner.java:43)
+	at com.jetbrains.python.run.PythonRunner.lambda$execute$0(PythonRunner.java:28)
+	at com.intellij.execution.ExecutionManager$startRunProfile$1.invoke(ExecutionManager.kt:64)
+	at com.intellij.execution.ExecutionManager$startRunProfile$1.invoke(ExecutionManager.kt:19)
+	at com.intellij.execution.impl.ExecutionManagerImpl$startRunProfile$1.invoke(ExecutionManagerImpl.kt:147)
+	at com.intellij.execution.impl.ExecutionManagerImpl$startRunProfile$1.invoke(ExecutionManagerImpl.kt:60)
+	at com.intellij.execution.impl.ExecutionManagerImpl$doStartRunProfile$startRunnable$1.run(ExecutionManagerImpl.kt:208)
+	at com.intellij.openapi.application.TransactionGuardImpl$2.run(TransactionGuardImpl.java:201)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:831)
+	at com.intellij.openapi.application.impl.ApplicationImpl.lambda$invokeLater$4(ApplicationImpl.java:310)
+	at com.intellij.openapi.application.impl.FlushQueue.doRun(FlushQueue.java:80)
+	at com.intellij.openapi.application.impl.FlushQueue.runNextEvent(FlushQueue.java:128)
+	at com.intellij.openapi.application.impl.FlushQueue.flushNow(FlushQueue.java:46)
+	at com.intellij.openapi.application.impl.FlushQueue$FlushNow.run(FlushQueue.java:184)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:776)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:727)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:746)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.java:974)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.java:847)
+	at com.intellij.ide.IdeEventQueue.lambda$null$8(IdeEventQueue.java:449)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:741)
+	at com.intellij.ide.IdeEventQueue.lambda$dispatchEvent$9(IdeEventQueue.java:448)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:831)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.java:496)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2020-07-17 23:56:04,765 [17042884]   WARN - ution.process.OSProcessHandler - Process has been already terminated: /home/gus/workspaces/wpy/venvs/mathor/bin/python3.6 /home/gus/apps/pycharm-community-2018.2.4/plugins/python-ce/helpers/pydev/pydevd.py --multiproc --qt-support=auto --client 127.0.0.1 --port 38907 --file /home/gus/workspaces/wpy/IACapstone/src/run.py 
+2020-07-18 06:52:04,815 [42002934]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+2020-07-18 06:52:04,977 [42003096]   WARN - pl.local.NativeFileWatcherImpl - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-07-18 06:52:04,977 [42003096]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-07-18 08:46:11,071 [48849190]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+2020-07-18 08:46:11,206 [48849325]   WARN - pl.local.NativeFileWatcherImpl - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-07-18 08:46:11,206 [48849325]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-07-18 09:32:36,963 [51635082]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+2020-07-18 09:32:37,103 [51635222]   WARN - pl.local.NativeFileWatcherImpl - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-07-18 09:32:37,103 [51635222]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020-07-25 09:40:31,489 [    267]   WARN - llij.ide.plugins.PluginManager - Resource bundle redefinition for plugin 'com.jetbrains.pycharm.community.customization'. Old value: messages.ActionsBundle, new value: messages.PyBundle 
+2020-07-25 09:40:32,363 [   1141]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2020-07-25 09:40:32,368 [   1146]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: com.intellij] 
+2020-07-25 09:40:32,368 [   1146]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2020-07-25 09:40:32,414 [   1192]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: PythonCore] 
+2020-07-25 09:40:34,074 [   2852]   WARN - pl.local.NativeFileWatcherImpl - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-07-25 09:40:34,075 [   2853]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-07-25 09:40:35,231 [   4009]   WARN - openapi.wm.impl.ToolWindowImpl - ToolWindow icons should be 13x13. Please fix ToolWindow (ID:  Problems View) or icon jar:file:/home/gus/apps/pycharm-community-2018.2.4/lib/icons.jar!/general/warning.svg 
+2020-07-25 09:40:41,081 [   9859]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-07-25 09:40:41,081 [   9859]   WARN - .skeletons.PySkeletonRefresher - matplotlib._contour 
+2020-07-25 09:40:41,081 [   9859]   WARN - .skeletons.PySkeletonRefresher - matplotlib._image 
+2020-07-25 09:40:41,081 [   9859]   WARN - .skeletons.PySkeletonRefresher - matplotlib._path 
+2020-07-25 09:40:41,081 [   9859]   WARN - .skeletons.PySkeletonRefresher - matplotlib._png 
+2020-07-25 09:40:41,081 [   9859]   WARN - .skeletons.PySkeletonRefresher - matplotlib._qhull 
+2020-07-25 09:40:41,082 [   9860]   WARN - .skeletons.PySkeletonRefresher - matplotlib._tri 
+2020-07-25 09:40:41,082 [   9860]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._backend_agg 
+2020-07-25 09:40:41,082 [   9860]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._tkagg 
+2020-07-25 09:40:41,082 [   9860]   WARN - .skeletons.PySkeletonRefresher - matplotlib.ft2font 
+2020-07-25 09:40:41,082 [   9860]   WARN - .skeletons.PySkeletonRefresher - matplotlib.ttconv 
+2020-07-25 09:40:41,082 [   9860]   WARN - .skeletons.PySkeletonRefresher - xgboost.lib.libxgboost 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - _foo 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_dataset 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_flight 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_python 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_python_flight 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libgandiva 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libparquet 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libplasma 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - scipy.optimize._lsap_ 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - tensorflow.compiler.tf2xla.ops._xla_ops 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - tensorflow.core.kernels.libtfkernel_sobol_op 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - tensorflow.lite.experimental.microfrontend.python.ops._audio_microfrontend_op 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.activations._activation_ops 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.image._distort_image_ops 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.image._image_ops 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.image._resampler_ops 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.layers._correlation_cost_ops 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.seq2seq._beam_search_ops 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.text._parse_time_op 
+2020-07-25 09:40:41,248 [  10026]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.text._skip_gram_ops 

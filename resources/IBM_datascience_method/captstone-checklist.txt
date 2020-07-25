@@ -1,0 +1,41 @@
+In this module you will create your project submission.
+
+We'll grade all submissions which didn't receive enough reviews within 10 days manually.
+
+These are the grading criteria:
+
+- From the answer, please judge if the learner has read and understood the documents on the process model and architectural decision guidelines
+
+- Please try to judge if the use case and data set is interesting and challenging enough to be an interesting capstone project
+
+Please watch the video and assign points as described below. For each item you find coverage in the video please assign one point.
+
+Use Case
+Data Set
+Data Quality Assessment
+Data Exploration (e.g. correlation between columns)
+Data Visualization (e.g. value distribution of columns)
+At least one Feature Engineering (e.g. imputing missing values) applied
+Selection and justification of Model Performance Indicator (e.g. F1 score)
+At least one traditional Machine Learning Algorithm and one DeepLearning Algorithm applied and demonstrated
+Model performance between different feature engineerings and models compared and documented
+Please assign one point for each item below which is properly covered in the ADD
+
+Why have I chosen a specific method for data quality assessment?
+Why have I chosen a specific method for feature engineering?
+Why have I chosen a specific algorithm?
+Why have I chosen a specific framework?
+Why have I chosen a specific model performance indicator?
+Please provide a list of IBM Watson Studio Notebook permalinks GIST to your notebooks you consider as your data product
+
+Learn how to share a GIST of your notebooks
+
+https://github.com/IBM/coursera/wiki/FAQ#how-do-i-share-a-gist-of-my-notebook
+
+Please review the notebooks and assign points according to how many of the following items are properly covered
+
+The notebooks are clearly structured and documented
+The notebooks contain visualizations in the data quality assessment steps
+The notebooks reveal the overall data processing steps ETL->Feature Engineering->Model Training/Evaluation/Selection->Final Result
+The notebooks contain visualizations in the model performance assessment steps
+The notebooks show the answers to the questions defined in the Usecase

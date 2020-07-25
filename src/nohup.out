@@ -1,0 +1,30 @@
+[W 08:08:33.050 NotebookApp] Error loading server extension jupyter_http_over_ws
+    Traceback (most recent call last):
+      File "/home/gus/workspaces/wpy/venvs/mathor/lib/python3.6/site-packages/notebook/notebookapp.py", line 1670, in init_server_extensions
+        mod = importlib.import_module(modulename)
+      File "/home/gus/workspaces/wpy/venvs/mathor/lib/python3.6/importlib/__init__.py", line 126, in import_module
+        return _bootstrap._gcd_import(name[level:], package, level)
+      File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+    ModuleNotFoundError: No module named 'jupyter_http_over_ws'
+[I 08:08:33.077 NotebookApp] [jupyter_nbextensions_configurator] enabled 0.4.1
+[I 08:08:33.462 NotebookApp] JupyterLab extension loaded from /home/gus/workspaces/wpy/venvs/mathor/lib/python3.6/site-packages/jupyterlab
+[I 08:08:33.462 NotebookApp] JupyterLab application directory is /home/gus/workspaces/wpy/venvs/mathor/share/jupyter/lab
+[I 08:08:33.464 NotebookApp] Serving notebooks from local directory: /home/gus/workspaces/wpy/IACapstone/src
+[I 08:08:33.464 NotebookApp] The Jupyter Notebook is running at:
+[I 08:08:33.464 NotebookApp] http://localhost:8888/?token=0d46505639e9738fb1bb4ad05bc1e5879636486f105ed12f
+[I 08:08:33.464 NotebookApp]  or http://127.0.0.1:8888/?token=0d46505639e9738fb1bb4ad05bc1e5879636486f105ed12f
+[I 08:08:33.464 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 08:08:33.468 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home/gus/.local/share/jupyter/runtime/nbserver-16920-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=0d46505639e9738fb1bb4ad05bc1e5879636486f105ed12f
+     or http://127.0.0.1:8888/?token=0d46505639e9738fb1bb4ad05bc1e5879636486f105ed12f
+Se está abriendo en una sesión de navegador existente.
+[0725/080833.777788:ERROR:nacl_helper_linux.cc(308)] NaCl helper process running without a sandbox!
+Most likely you need to configure your SUID sandbox correctly
+[I 08:14:06.292 NotebookApp] Shutting down on /api/shutdown request.
+[I 08:14:06.292 NotebookApp] Shutting down 0 kernels
