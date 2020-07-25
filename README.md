@@ -39,12 +39,14 @@ The first step is to get a base model that gives us information about the minimu
 * Using TPOT, an AutoML library that automatically trains state of art models, in this case a 0.5 f1-score  is obtained using a ExtraTreesClassifier model. 
 65% of crops have changed the last year of the serie from the previous one, this makes so difficult to predict the next year, and a deep-learning model that could interpret this serie could help. 
 
+* [Model training notebook](course/modeling_sample.ipynb)
+
 **LSTM model**
+* [Deep learning model](course/modeling_keras.ipynb)
 
 **Se ha hecho mucho trabajo de experimentación en torno a esto, se puede consultar en le documento
 En este notebook muestro solo un ejemplo de los modelos finales y un resumen de las arquitecturas que he probado para intentar dar con un modelo optimo para el caso**
 (It's just a drapht, a bitacora of the steps followed, sorry just in spanish)
-* [Model training notebook](course/modeling_sample.ipynb)
 
 # Tuning and Deployment
 During the entry process, the effectiveness of each characteristic of the model has been measured to see how it affects the f1 metric. Once the definitive model has been selected, Bayesian optimization has been used to obtain the optimal parameters of the model and then it has been trained with the total data set.
