@@ -33,6 +33,14 @@ As a performance metric, the **f1-score on the test set** has been used, this me
 Because LSTM networks have a longer training time than other deep learning models, especially if regularization parameters that [disable the use of the cuDNN implementation are used](https://keras.io/api/layers/recurrent_layers/lstm/), a reduced dataset has been extracted for model training to speed up the construction of the different iterations of the model. The frequencies of each crop have been maintained to ensure the representativeness of this dataset.
 The sample dataset has been divided into three blocks to have separate data for training, validation and testing with percentages 70% / 15% / 15%. Train and test sets are used in the keras callback to measures performance during the training and the test set is used for final evaluation.
 
+**Base model**
+The first step is to get a base model that gives us information about the minimun performance expected for the deep learning model. Two basic models have been developt:
+* One model base using prior knowledge of crop usage, or using just the last year crop as expected category leads to a 0.25 f1-score.
+* Using TPOT, an AutoML library that automatically trains state of art models, in this case a 0.5 f1-score  is obtained using a ExtraTreesClassifier model. 
+65% of crops have changed the last year of the serie from the previous one, this makes so difficult to predict the next year, and a deep-learning model that could interpret this serie could help. 
+
+**LSTM model**
+
 **Se ha hecho mucho trabajo de experimentación en torno a esto, se puede consultar en le documento
 En este notebook muestro solo un ejemplo de los modelos finales y un resumen de las arquitecturas que he probado para intentar dar con un modelo optimo para el caso**
 (It's just a drapht, a bitacora of the steps followed, sorry just in spanish)
