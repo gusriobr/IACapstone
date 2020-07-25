@@ -13,7 +13,7 @@ As a first attempt, we gathered the last 9 years history for around 2M points ta
 
 # Data Set, ETL and Feature Creation
 The data consist in around 2 million points scatterred over all the region territory, the original data file was a shape file with point features, having each point an attribute for each year with the crop code used.
-We have 27 different crops: WHEAT, CORN, BARLEY, FLOOR, SUNFLOWER, RAPE, GREEN PEAS, ALFALFA, FORAGE, BEET, VINEYARD, OLIVE, HORTICULTURAL, AROMATIC, FRUITS, SCRUB, DIFFERENT KINDS OF LEAFY TREES, etc
+We have 27 different crops: WHEAT, CORN, BARLEY, FLOOR, SUNFLOWER, RAPE, GREEN PEAS, ALFALFA, FORAGE, BEET, VINEYARD, OLIVE, HORTICULTURAL, AROMATIC, FRUITS, DIFFERENT KINDS OF LEAFY TREES, etc
 
 The first feature extraction technique applied was the conversion of the crop codes so the can be used in the LSTM model. Crop codes is a categorical variable and must be converted to numerical values in order to be used as a deep learning model input. 
 This conversion has been done using the [feature embedding technique](https://cloud.google.com/solutions/machine-learning/overview-extracting-and-serving-feature-embeddings-for-machine-learning), to convert each crop code to a vector of fixed dimensions.
