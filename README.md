@@ -2,11 +2,11 @@
 This is the final report for capstone project of IBM Advanced Data Science Course.
 
 # Use Case
-I work in a goberment body in a region of Spain that provides services and IT assistance to farmers. We are specially focused on developing decission support tools for different agricultural purposes. In one of this tools, it would be in a great help to have a model that could predict the next year land usage for a given area.
+I work in a goberment body in a region of Spain that provides services and IT assistance to farmers. We are specially focused on developing decission support tools for different agricultural purposes. In one of this tools, it would be in a great help to have a model that could predict the next year land usage for a given area base on historical data.
 
-The idea of the project is that the farmer uses his land in a cyclical way, using patterns, if we can recognize these patterns, we could know which crop is the most likely to use the following year, or the 2-3 crops with the most probability.
-This cyclical use of crops is a common practice to leave the land uncultivated one year out of three, to avoid problems with pests, fertilizers, etc. In other cases, there are static crops that generally do not vary (trees, olive, vineyard).
-The model does not intend to train a specific case of a farmer, we try to see if, taking a very high number of use cases, we can extract the generality of the patterns of use of the crops and given a sequence of years, we can know what the most likely crop for the following year.
+The idea behind the project is that the farmer uses his land in a cyclical way, using patterns, if we can recognize these patterns, we could know which crop is the most likely to be used the following year, or at least the 2-3 crops with the most probability.
+In this cyclical use of crops, is a common practice, for example, to leave the land uncultivated one year out of three, to avoid problems with pests, fertilizers, etc. In other cases, there are static crops that generally do not vary (trees, olive, vineyard).
+The model does not intend to train a specific case of a farmer, we try to see if, taking a very high number of use cases, we can extract the generality of the patterns of crop usage and given a sequence of years, we can know the most likely crop for the following year.
 
 As a first attempt, we gathered the last 9 years history for around 2M points tagging for each year the crop code, hoping that we can apply some LSTM network to predict the next year crop code. 
 
@@ -28,7 +28,7 @@ Because LSTM networks have a longer training time than other deep learning model
 The sample dataset has been divided into three blocks to have separate data for training, validation and testing with percentages 70% / 15% / 15%. Train and test sets are used in the keras callback to measures performance during the training and the test set is used for final evaluation.
 
 # Tuning and Deployment
-Durante el proceso de entramiento se ha ido midiendo la efectividad de cada característica del modelo para ver cómo afecta a la métrica f1. Una vez se ha seleccionado el modelo definitivo, se ha utilizando optimización bayesiana para obtener los parámetros óptimos del modelo y después se ha entrenado con el conjunto de datos total.
+During the entry process, the effectiveness of each characteristic of the model has been measured to see how it affects the f1 metric. Once the definitive model has been selected, Bayesian optimization has been used to obtain the optimal parameters of the model and then it has been trained with the total data set.
 
 
 
