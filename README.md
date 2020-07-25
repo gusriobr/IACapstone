@@ -21,6 +21,7 @@ All this data comes from claims for payment of CAP subsidies, accesible for us a
 # Data Exploration, Visualization and Quality Assessment
 Review the data and its structure, check the cultivation codes and see the data distributions they have to see how it can affect the model.
 The data set is strongly unbalanced. In all areas there are predominant crops, in our case they are the cereals. This makes the dataset have crops with an extreamly high frequency, to make sure that the less frequent crops have enough representation, a dataset has been created with a minimum frequency per crop.
+
 [date exploration notebook](course/eda_sampling.ipynb)
 
 # Model Definition, Training and Evaluation
