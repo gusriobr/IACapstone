@@ -50,7 +50,7 @@ The model used is similar to those commonly used for text-based prediction (next
 In our case, as an analogy, the LSTM model will be learning the patterns of crop use that occur in our region.
 * [LSTM model](course/modeling_lstm_keras.ipynb)
 
-**1D Convolution network **
+**1D Convolution network**
 
 As an alternative to LSTM models, I have also tried 1-dimensional convolution nets. Convolution nets are widely used models for image recognition. These recesses create filters that store information about the most relevant color structures associated with a category (eg, a cat's ear, a bird's beak). This for two dimensions, when we go to one dimension, the convolution network looks for patterns in the time series. The model kernel moves along the timeline and the network filters will store in their weights the information that encodes the most relevant patterns for each crop category.
 * [LSTM model](course/modeling_1dconv_keras.ipynb)
