@@ -67,3 +67,8 @@ there are many ideas that I have to try:
 * Flatten the timeseries to leghten the context so LSTM can have more steps to learn from context.
 * Experiment with 1DConv networks. As an alternative to LSTM models, I have also tried 1-dimensional convolution nets. Convolution nets are widely used models for image recognition. These recesses create filters that store information about the most relevant color structures associated with a category (eg, a cat's ear, a bird's beak). This for two dimensions, when we go to one dimension, the convolution network looks for patterns in the time series. The model kernel moves along the timeline and the network filters will store in their weights the information that encodes the most relevant patterns for each crop category·
 * Use [lstm-vis library](http://lstm.seas.harvard.edu/) to visualize the LSTM cells state.
+
+
+
+About catgegorical time series:
+* (https://silo.tips/download/categorical-time-series-analysis-modelling-monitoring-christian-h-wei-department)
