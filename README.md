@@ -1,6 +1,10 @@
 # Predicting crop usage from historical data
 This is the final report for capstone project of IBM [Advanced Data Science with IBM Specialization](https://www.coursera.org/specializations/advanced-data-science-ibm).
 
+***This is a pet project developed during a training course and should not be taken as finished work or extract conclusions from it. 
+
+Contact me if you are interested in the actual state of this work.***
+
 # Use Case
 I work in a goberment body in a region of Spain that provides services and IT assistance to farmers. We are specially focused on developing decission support tools for different agricultural purposes. In one of this tools, it would be in a great help to have a model that could predict the next year land usage for a given area base on historical data.
 
@@ -31,7 +35,7 @@ The initial idea was to use LSTM models, these models take advantage of the cont
 As a performance metric, the **f1-score on the test set** has been used, this metric balances between precision and recall and makes it more robust in unbalanced datasets.
 
 Because LSTM networks have a longer training time than other deep learning models, especially if regularization parameters that [disable the use of the cuDNN implementation are used](https://keras.io/api/layers/recurrent_layers/lstm/), a reduced dataset has been extracted for model training to speed up the construction of the different iterations of the model. The frequencies of each crop have been maintained to ensure the representativeness of this dataset.
-The sample dataset has been divided into three blocks to have separate data for training, validation and testing with percentages 70% / 15% / 15%. Train and test sets are used in the keras callback to measures performance during the training and the test set is used for final evaluation.
+The sample dataset has been divided into three blocks to have separate data for training and testing with percentages 80% / 20%. Train and test sets are used in the keras callback to measures performance during the training and the test set is used for final evaluation.
 
 **Base model**
 The first step is to get a base model that gives us information about the minimun performance expected for the deep learning model. Two basic models have been developt:
@@ -59,6 +63,10 @@ The test curve is stuck int the 0.71 plateau, the [ReduceLROnPlateau](https://ke
 
 * [Tunning the model](course/modeling_keras.ipynb#Parameter-Tunning)
 
+# Project presentations
+* [Stakeholders](resources/stake_holders_press.odp)
+* [Data science team](resources/datascience_team_press.odp)
+
 # Next steps
 This is just a starting point, thank you to this course 
 there are many ideas that I have to try:
@@ -70,5 +78,5 @@ there are many ideas that I have to try:
 
 
 
-About catgegorical time series:
+About categorical time series:
 * (https://silo.tips/download/categorical-time-series-analysis-modelling-monitoring-christian-h-wei-department)
