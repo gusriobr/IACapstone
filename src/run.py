@@ -1,13 +1,11 @@
 import keras
 import keras.backend as K
 import tensorflow as tf
-from tensorflow.python.keras.callbacks import ReduceLROnPlateau
 
-import models_1d
+import models_confs
 from data import read_crop_list, prepare_data
 from eval import eval_model_one_hot
 from metrics import f1, f1_loss
-from models import model_basic_lstm
 from training import train, create_training_folder, create_callbacks
 
 
@@ -29,13 +27,15 @@ if __name__ == '__main__':
     crop_names = df_crops["description"].values.tolist()
     crop_list = df_crops["code"].values.tolist()
 
-    (X_train, y_train), (X_test, y_test), (X_val, y_val) = prepare_data()
-    exit(0)
+    (X_train, y_train), (X_test, y_test) = prepare_data()
 
-    models = models_1d.lstm_models
-    models = [
-        ["lstm128", model_basic_lstm()]
-    ]
+    X_train = X_train[:, 3:]
+    X_test = X_test[:, 3:]
+
+    models = models_confs.tcn_models()
+    # models = [
+    #     ["lstm128", model_basic_lstm()]
+    # ]
 
     # models = [
     #     ["lstm_64_depth_5", load_model(res('results/20200719_193831_lstm_64_depth_5'))]
@@ -43,15 +43,15 @@ if __name__ == '__main__':
     training_params = {
         'loss': f1_loss,
         # 'loss': 'categorical_crossentropy',
-        # 'optimizer': 'rmsprop',
-        'optimizer': tf.optimizers.RMSprop(lr=0.001, clipvalue=0.3),
+        'optimizer': 'rmsprop',
+        # 'optimizer': tf.optimizers.RMSprop(lr=0.001, clipvalue=0.3),
         'metrics': [f1],
         'run_eagerly': False
     }
 
     epochs = 100
     evaluate = True
-    exp_base = "conv1d"
+    exp_base = "tcnv3"
     for reg in models:
         tag = reg[0]
         model = reg[1]
@@ -68,10 +68,10 @@ if __name__ == '__main__':
         # lr_scheduller = tf.keras.callbacks.ReduceLROnPlateau(step_decay_exp)
         lr_scheduller = None
         callbacks = create_callbacks(folder, tensor_board=True, monitor_metric="val_f1", monitor_mode="max",
-                                     lr_scheduller=lr_scheduller)
+                                     patience=10, lr_scheduller=lr_scheduller)
         try:
             print("========== Training {} ========".format(tag))
-            train(model, X_train, y_train, X_val, y_val, epochs=epochs, callbacks=callbacks)
+            train(model, X_train, y_train, X_test, y_test, epochs=epochs, callbacks=callbacks)
             # save model
             model_folder = '{}/model'.format(folder)
             model.save(model_folder)

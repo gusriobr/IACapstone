@@ -1,17 +1,14 @@
 import numbers
 
 import tensorflow as tf
-from keras.layers import concatenate, Activation
-# from keras.layers import Embedding, LSTM, BatchNormalization, Dense, Conv1D, GlobalAveragePooling1D, Dropout, MaxPooling1D, Permute
-# from keras.layers import LSTM, Dense, Embedding, BatchNormalization, TimeDistributed, GRU
-from keras.models import Sequential, Model
 from tensorflow.python.keras import Input
 from tensorflow.python.keras.backend import concatenate
 from tensorflow.python.keras.layers import Embedding, LSTM, BatchNormalization, Dense, Conv1D, GlobalAveragePooling1D, \
-    Dropout, \
-    Permute, Concatenate, GRU, MaxPooling1D, Flatten
+    Dropout, concatenate, Activation, SpatialDropout1D, Permute, Concatenate, GRU, MaxPooling1D, Flatten, Add, MaxPool1D
+from tensorflow.python.keras.models import Sequential, Model
 from tensorflow_addons.rnn import LayerNormLSTMCell
 from tensorflow_addons.utils.types import Activation
+import tcn_mod
 
 
 def activation_func(value):
@@ -62,8 +59,8 @@ def model_by_conf(sequence_length=8, vocab_size=27, embedding_size=20, layer_con
                   final_activation="relu", final_activation_f=None,
                   ):
     model = Sequential()
-    model.add(Embedding(vocab_size, embedding_size,
-                        input_length=sequence_length))
+    # model.add(Embedding(vocab_size, embedding_size,
+    #                     input_length=sequence_length))
     # base_conf = {"units": 256, "dropout": 0.3, "recurrent_dropout": 0, "activation": "sigmoid", "sigmoid": "tanh"}
 
     for i, params in enumerate(layer_conf):
@@ -71,7 +68,7 @@ def model_by_conf(sequence_length=8, vocab_size=27, embedding_size=20, layer_con
         if "batch_norm" in params:
             batch_norm = params["batch_norm"]
             del params["batch_norm"]
-        layer_type = params["type"]
+        layer_type = params["type"].lower()
         del params["type"]
 
         print("Creating layer: " + layer_type)
@@ -80,19 +77,33 @@ def model_by_conf(sequence_length=8, vocab_size=27, embedding_size=20, layer_con
         dropout = None
         if layer_type == "lstm":
             layer_k = LSTM(**params)
+        elif layer_type == "embeddings":
+            layer_k = Embedding(**params)
         elif layer_type == "dense":
             if "dropout" in params:
                 dropout = params["dropout"]
                 del params["dropout"]
             layer_k = Dense(**params)
+        elif layer_type == "batchnormalization":
+            layer_k = BatchNormalization(**params)
+        elif layer_type == "globalaveragepooling1d":
+            layer_k = BatchNormalization(**params)
+        elif layer_type == "spatialdropout1d":
+            layer_k = SpatialDropout1D(**params)
         elif layer_type == "gru":
             layer_k = GRU(**params)
         elif layer_type == "conv1d":
             layer_k = Conv1D(**params)
-        elif layer_type.lower() == "maxpooling1d":
+        elif layer_type == "maxpooling1d":
             layer_k = MaxPooling1D(**params)
-        elif layer_type.lower() == "flatten":
+        elif layer_type == "flatten":
             layer_k = Flatten(**params)
+        # elif layer_type == "tcn":
+        #     layer_k = TCN(**params)
+        # elif layer_type == "tcn_mod":
+        #     layer_k = tcn_mod.TCN(**params)
+        else:
+            raise Exception("Type not found: " + layer_type)
         model.add(layer_k)
 
         if batch_norm is not None and int(batch_norm) > 0:
@@ -100,6 +111,62 @@ def model_by_conf(sequence_length=8, vocab_size=27, embedding_size=20, layer_con
         if dropout:
             model.add(Dropout(dropout))
 
+    return model
+
+
+def model_inceptionTime(input_shape, nb_classes, nb_filters=32, use_residual=True, use_bottleneck=True, depth=6,
+                        kernel_size=41):
+    def _inception_module(input_tensor, stride=1, activation='linear', bottleneck_size=True):
+
+        if use_bottleneck and int(input_tensor.shape[-1]) > 1:
+            input_inception = Conv1D(filters=bottleneck_size, kernel_size=1,
+                                     padding='same', activation=activation, use_bias=False)(input_tensor)
+        else:
+            input_inception = input_tensor
+
+        # kernel_size_s = [3, 5, 8, 11, 17]
+        # kernel_size_s = [kernel_size // (2 ** i) for i in range(3)]
+        kernel_size_s = [1, 2, 4, 8]
+
+        conv_list = []
+
+        for i in range(len(kernel_size_s)):
+            conv_list.append(Conv1D(filters=nb_filters, kernel_size=kernel_size_s[i],
+                                    strides=stride, padding='same',
+                                    activation=activation, use_bias=False)(input_inception))
+
+        max_pool_1 = MaxPool1D(pool_size=3, strides=stride, padding='same')(input_tensor)
+
+        conv_6 = Conv1D(filters=nb_filters, kernel_size=1,
+                        padding='same', activation=activation, use_bias=False)(max_pool_1)
+        conv_list.append(conv_6)
+
+        x = Concatenate(axis=2)(conv_list)
+        x = BatchNormalization()(x)
+        x = Activation(activation='relu')(x)
+        return x
+
+    def _shortcut_layer(input_tensor, out_tensor):
+        shortcut_y = Conv1D(filters=int(out_tensor.shape[-1]), kernel_size=1,
+                            padding='same', use_bias=False)(input_tensor)
+        shortcut_y = BatchNormalization()(shortcut_y)
+        x = Add()([shortcut_y, out_tensor])
+        x = Activation('relu')(x)
+        return x
+
+    input_layer = Input(input_shape)
+    x = input_layer
+    input_res = input_layer
+
+    for d in range(depth):
+        x = _inception_module(x)
+        if use_residual and d % 3 == 2:
+            x = _shortcut_layer(input_res, x)
+            input_res = x
+
+    gap_layer = GlobalAveragePooling1D()(x)
+    output_layer = Dense(nb_classes, activation='softmax')(gap_layer)
+    model = Model(inputs=input_layer, outputs=output_layer)
     return model
 
 
@@ -292,7 +359,43 @@ def model_gru(sequence_length, vocab_size):
 
     return model
 
-def lstmfcn(sequence_length, embeddings, layer_size = 64):
+
+def lstm_conv1_mutibranch(sequence_length, vocab_size, embedding_size, layer_size=64):
+    input = Input(shape=(1, sequence_length))  # tensor
+
+    conv_emb = Embedding(vocab_size, embedding_size, input_length=sequence_length)(input)
+
+    conv2 = Conv1D(64, 2, padding='same')(conv_emb)
+    conv2 = BatchNormalization()(conv2)
+    conv2 = Activation('relu')(conv2)
+
+    conv3 = Conv1D(64, 3, padding='same')(conv_emb)
+    conv3 = BatchNormalization()(conv3)
+    conv3 = Activation('relu')(conv3)
+
+    conv5 = Conv1D(64, 5, padding='same')(conv_emb)
+    conv5 = BatchNormalization()(conv5)
+    conv5 = Activation('relu')(conv5)
+
+    lstm_emb = Embedding(vocab_size, embedding_size, input_length=sequence_length)(input)
+    lstm = LSTM(layer_size)(lstm_emb)  # lstm block
+    lstm = SpatialDropout1D(0.3)(lstm)
+    lstm = LSTM(units=128, recurrent_dropout=0.3)(lstm)
+    lstm = BatchNormalization()(lstm)
+    lstm = Dropout(0.3)(lstm)
+
+    x = Concatenate(axis=2)([conv2, conv3, conv5, lstm])
+    x = BatchNormalization()(x)
+    x = Activation(activation='relu')(x)
+
+    x = Dense(256)(x)
+    x = BatchNormalization()(x)
+    x = Activation(activation='relu')(x)
+
+    x = Dense(vocab_size, activation='relu')(x)
+
+
+def lstmfcn(sequence_length, embeddings, layer_size=64):
     vocab_size, embedding_size = embeddings
 
     ip = Input(shape=(1, sequence_length))  # tensor
@@ -388,7 +491,6 @@ def fcn(sequence_length, embeddings, layer_size=64):
     return model
 
 
-
 def basic_lstm_flatten(sequence_length, embeddings):
     input = Input(shape=(sequence_length,))
     embeddings = Embedding(output_dim=embedding_size, input_dim=vocab_size, input_length=sequence_length)(input)
@@ -401,3 +503,53 @@ def basic_lstm_flatten(sequence_length, embeddings):
     model = Model(input, output)
     # tag = "conv_lstm_restnet"
     return model
+
+
+def inception(input):
+    conv1 = Conv1D(32, 2, padding='same')(input)
+    conv2 = Conv1D(32, 3, padding='same')(input)
+    conv3 = Conv1D(32, 5, padding='same')(input)
+
+    pool = MaxPooling1D(2, strides=1, padding='same')(input)
+    conv4 = Conv1D(32, 1, padding='same')(pool)
+
+    output = Concatenate(axis=2)([conv1, conv2, conv3, conv4])
+    return output
+
+
+def lstm_inception(sequence_length, embeddings, num_modules=2, layer_size=256):
+    vocab_size, embedding_size = embeddings
+
+    input = Input(shape=(sequence_length,))
+
+    conv_emb = Embedding(vocab_size, embedding_size, input_length=sequence_length)(input)
+
+    for i in range(0, num_modules):
+        x = inception(conv_emb)
+        x = BatchNormalization()(x)
+        x = Activation('relu')(x)
+
+    lstm_emb = Embedding(vocab_size, embedding_size, input_length=sequence_length)(input)
+    lstm = SpatialDropout1D(0.3)(lstm_emb)
+    lstm = LSTM(units=64, recurrent_dropout=0.3, return_sequences=True)(lstm)
+    lstm = BatchNormalization()(lstm)
+    lstm = Dropout(0.3)(lstm)
+
+    x = Concatenate(axis=2)([x, lstm])
+    #     x = BatchNormalization()(x)
+    #     x = Activation(activation='relu')(x)
+
+    #     x = SpatialDropout1D(0.3)(x)
+    x = LSTM(units=layer_size, recurrent_dropout=0.3, return_sequences=False)(x)
+    x = BatchNormalization()(x)
+    x = Dropout(0.3)(x)
+
+    x = Dense(256)(x)
+    x = BatchNormalization()(x)
+    x = Activation(activation='relu')(x)
+
+    x = Flatten()(x)
+
+    output = Dense(vocab_size, activation='relu')(x)
+
+    return Model(input, output)

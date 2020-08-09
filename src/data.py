@@ -38,16 +38,14 @@ def load_undersampled_data():
     data = np.load(file_path)
     return data
 
-def prepare_data():
-    # sample = load_original_data(sample_size=10000)
-    sample = load_structured_sample()
-    # sample = load_undersampled_data()
 
-    y = sample[:, 8]
-    X = sample[:, 0:8]
+def prepare_data(data_file="data_sampled.npy", test_size=0.3):
+    file_path = res("resources/" + data_file)
+    sample = np.load(file_path)
 
-    # X = one_hot_encoding_X(X, vocab_size=vocab_size)
-    num_clasess = len(np.unique(y[:, 11]))
+    y = sample[:, 11]
+    X = sample[:, 0:11]
+
     y = to_categorical(y)
 
     print(y.shape)
@@ -55,16 +53,16 @@ def prepare_data():
     # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
     # Create train/test/validation
-    sss = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=0)
+    sss = StratifiedShuffleSplit(n_splits=1, test_size=test_size, random_state=0)
     for train_index, test_index in sss.split(X, y):
         X_train, X_test = X[train_index], X[test_index]
         y_train, y_test = y[train_index], y[test_index]
-    for train_index, test_index in sss.split(X_train, y_train):
-        X_train, X_val = X[train_index], X[test_index]
-        y_train, y_val = y[train_index], y[test_index]
-    print("===Train/validation/test size: {}, {}, {}.".format(len(y_train), len(y_val), len(y_test)))
+    # for train_index, test_index in sss.split(X_train, y_train):
+    #     X_train, X_val = X[train_index], X[test_index]
+    #     y_train, y_val = y[train_index], y[test_index]
+    print("===Train/validation/test size: {}, {}.".format(len(y_train), len(y_test)))
 
-    return (X_train, y_train), (X_test, y_test), (X_val, y_val)
+    return (X_train, y_train), (X_test, y_test)  # , (X_val, y_val)
 
 
 def read_crop_list():

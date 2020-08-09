@@ -3,7 +3,7 @@ import os
 
 import keras
 import tensorflow as tf
-from keras.callbacks import CSVLogger, ModelCheckpoint
+from tensorflow.python.keras.callbacks import ModelCheckpoint, CSVLogger, EarlyStopping, TensorBoard
 
 from data import res, tstmp
 
@@ -39,7 +39,7 @@ def create_callbacks(folder, tensor_board=False, lr_scheduller=None,
     callbacks = []
     if tensor_board:
         logdir = "{}/tfboard".format(folder)
-        tensorboard_callback = keras.callbacks.TensorBoard(log_dir=logdir, histogram_freq=1, write_graph=True,
+        tensorboard_callback = TensorBoard(log_dir=logdir, histogram_freq=1, write_graph=True,
                                                            write_grads=True)
         callbacks.append(tensorboard_callback)
     if csv_logger:
@@ -55,7 +55,7 @@ def create_callbacks(folder, tensor_board=False, lr_scheduller=None,
     if early_stopper:
         if not monitor_metric:
             raise Exception("Define the monitor metric!");
-        stopper = keras.callbacks.EarlyStopping(
+        stopper = EarlyStopping(
             monitor=monitor_metric,
             # "no longer improving" being defined as "no better than 1e-2 less"
             min_delta=0.001,
