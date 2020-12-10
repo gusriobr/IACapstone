@@ -28,3 +28,128 @@ Se está abriendo en una sesión de navegador existente.
 Most likely you need to configure your SUID sandbox correctly
 [I 08:14:06.292 NotebookApp] Shutting down on /api/shutdown request.
 [I 08:14:06.292 NotebookApp] Shutting down 0 kernels
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2020-10-08 06:49:58,643 [    550]   WARN - llij.ide.plugins.PluginManager - Resource bundle redefinition for plugin 'com.jetbrains.pycharm.community.customization'. Old value: messages.ActionsBundle, new value: messages.PyBundle 
+2020-10-08 06:49:59,999 [   1906]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2020-10-08 06:50:00,009 [   1916]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: com.intellij] 
+2020-10-08 06:50:00,010 [   1917]   WARN - nSystem.impl.ActionManagerImpl - keymap "Visual Studio" not found [Plugin: com.intellij] 
+2020-10-08 06:50:00,076 [   1983]   WARN - nSystem.impl.ActionManagerImpl - keymap "NetBeans 6.5" not found [Plugin: PythonCore] 
+2020-10-08 06:50:02,748 [   4655]   WARN - pl.local.NativeFileWatcherImpl - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:02,748 [   4655]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:12,119 [  14026]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-10-08 06:50:12,119 [  14026]   WARN - .skeletons.PySkeletonRefresher - _foo 
+2020-10-08 06:50:12,119 [  14026]   WARN - .skeletons.PySkeletonRefresher - matplotlib._contour 
+2020-10-08 06:50:12,119 [  14026]   WARN - .skeletons.PySkeletonRefresher - matplotlib._image 
+2020-10-08 06:50:12,119 [  14026]   WARN - .skeletons.PySkeletonRefresher - matplotlib._path 
+2020-10-08 06:50:12,120 [  14027]   WARN - .skeletons.PySkeletonRefresher - matplotlib._png 
+2020-10-08 06:50:12,120 [  14027]   WARN - .skeletons.PySkeletonRefresher - matplotlib._qhull 
+2020-10-08 06:50:12,120 [  14027]   WARN - .skeletons.PySkeletonRefresher - matplotlib._tri 
+2020-10-08 06:50:12,122 [  14029]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._backend_agg 
+2020-10-08 06:50:12,122 [  14029]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._tkagg 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - matplotlib.ft2font 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - matplotlib.ttconv 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_dataset 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_flight 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_python 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_python_flight 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libgandiva 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libparquet 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libplasma 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - scipy.optimize._lsap_ 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - tensorflow.compiler.tf2xla.ops._xla_ops 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - tensorflow.core.kernels.libtfkernel_sobol_op 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - tensorflow.lite.experimental.microfrontend.python.ops._audio_microfrontend_op 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.activations._activation_ops 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.image._distort_image_ops 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.image._image_ops 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.image._resampler_ops 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.layers._correlation_cost_ops 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.seq2seq._beam_search_ops 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.text._parse_time_op 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.text._skip_gram_ops 
+2020-10-08 06:50:12,123 [  14030]   WARN - .skeletons.PySkeletonRefresher - xgboost.lib.libxgboost 
+2020-10-08 06:50:14,913 [  16820]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+2020-10-08 06:50:15,065 [  16972]   WARN - pl.local.NativeFileWatcherImpl - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:15,065 [  16972]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:15,088 [  16995]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+2020-10-08 06:50:15,253 [  17160]   WARN - pl.local.NativeFileWatcherImpl - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:15,253 [  17160]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:15,285 [  17192]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+2020-10-08 06:50:15,452 [  17359]   WARN - pl.local.NativeFileWatcherImpl - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:15,452 [  17359]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:15,488 [  17395]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+2020-10-08 06:50:15,663 [  17570]   WARN - pl.local.NativeFileWatcherImpl - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:15,663 [  17570]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:15,712 [  17619]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+2020-10-08 06:50:15,890 [  17797]   WARN - pl.local.NativeFileWatcherImpl - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:15,890 [  17797]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:15,929 [  17836]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+2020-10-08 06:50:16,095 [  18002]   WARN - pl.local.NativeFileWatcherImpl - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:16,095 [  18002]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:16,132 [  18039]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+2020-10-08 06:50:16,290 [  18197]   WARN - pl.local.NativeFileWatcherImpl - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:16,290 [  18197]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:16,320 [  18227]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+2020-10-08 06:50:16,473 [  18380]   WARN - pl.local.NativeFileWatcherImpl - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:16,473 [  18380]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:16,504 [  18411]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+2020-10-08 06:50:16,660 [  18567]   WARN - pl.local.NativeFileWatcherImpl - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:16,660 [  18567]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+2020-10-08 06:50:16,700 [  18607]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+2020-10-08 06:50:16,700 [  18607]   WARN - api.vfs.impl.local.FileWatcher - File watcher failed to start 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - _foo 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_dataset 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_flight 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_python 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_python_flight 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libgandiva 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libparquet 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libplasma 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - scipy.optimize._lsap_ 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - tensorflow.compiler.tf2xla.ops._xla_ops 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - tensorflow.core.kernels.libtfkernel_sobol_op 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - tensorflow.lite.experimental.microfrontend.python.ops._audio_microfrontend_op 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.activations._activation_ops 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.image._distort_image_ops 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.image._image_ops 
+2020-10-08 06:50:21,574 [  23481]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.image._resampler_ops 
+2020-10-08 06:50:21,575 [  23482]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.layers._correlation_cost_ops 
+2020-10-08 06:50:21,575 [  23482]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.seq2seq._beam_search_ops 
+2020-10-08 06:50:21,575 [  23482]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.text._parse_time_op 
+2020-10-08 06:50:21,575 [  23482]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.text._skip_gram_ops 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - Some skeletons failed to generate 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - _foo 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - matplotlib._contour 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - matplotlib._image 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - matplotlib._path 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - matplotlib._png 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - matplotlib._qhull 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - matplotlib._tri 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._backend_agg 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - matplotlib.backends._tkagg 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - matplotlib.ft2font 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - matplotlib.ttconv 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_dataset 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_flight 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_python 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libarrow_python_flight 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libgandiva 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libparquet 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - pyarrow.libplasma 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - scipy.optimize._lsap_ 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - tensorflow.compiler.tf2xla.ops._xla_ops 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - tensorflow.core.kernels.libtfkernel_sobol_op 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - tensorflow.lite.experimental.microfrontend.python.ops._audio_microfrontend_op 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.activations._activation_ops 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.image._distort_image_ops 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.image._image_ops 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.image._resampler_ops 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.layers._correlation_cost_ops 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.seq2seq._beam_search_ops 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.text._parse_time_op 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - tensorflow_addons.custom_ops.text._skip_gram_ops 
+2020-10-08 06:50:21,837 [  23744]   WARN - .skeletons.PySkeletonRefresher - xgboost.lib.libxgboost 

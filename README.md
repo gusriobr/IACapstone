@@ -53,7 +53,7 @@ In order to use them, we will code the categorical variables using embeddings, s
 The model used is similar to those commonly used for text-based prediction (next word prediction, sentiment prediction, etc.). In these models each word is encoded with a vector and the LSTM model is capable of giving an answer based on the context of the series received as input.
 In our case, as an analogy, the LSTM model will be learning the patterns of crop use that occur in our region.
 The obtained model has a **f1-score of 0.71, outperfoming the base model**.
-* [LSTM model](course/modeling_lstm_keras.ipynb)
+* [LSTM model](course/modeling_keras.ipynb)
 
 # Tuning and Deployment
 During the entry process, the effectiveness of each characteristic of the model has been measured to see how it affects the f1 metric.
